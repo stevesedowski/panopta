@@ -1,0 +1,10 @@
+<div>
+	<ul id="alert_info" ng-repeat="alert in alerts">
+		<li>
+			<div>{{alert.server_name}}</div>
+			<div>{{alert.server}}</div>
+			<div>When it went down: {{alert.start_time}}</div>
+			<div>Outage Type: {{alert.type}}</div>
+		</li>
+	</ul>
+</div>

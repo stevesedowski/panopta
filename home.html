@@ -1,0 +1,84 @@
+<!-- <div ng-cloak>
+	<div id="title">Home Page</div>
+	{{768/34}}
+	<div>{{active}}</div>
+	<div ng-show="active">
+		<alert-dir></alert-dir>
+		<a href="#/alert-info"><img src="/img/alert-icon-md.png"></a>
+	</div>
+	<div ng-hide="active">
+		<img src="/img/calm.png">
+	</div>
+</div> -->
+<!-- write a directive for the proper result:
+for active alerts:
+"<img src=src="/img/alert-icon-md.png">" -->
+		<div ng-hide="val" id="spacer">
+			<div class="loading bar">
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+		</div>
+	<main id="alerts" ng-show="active">
+		<div class="container">
+			
+			<h3 class="total-outages">Total Outages: {{total}}</h3>
+		</div>
+						<!-- If No Alerts -->
+			<!-- 				<div class="no-alerts">
+								<h2>A-Okay</h2>
+								<p>You have no active alerts</p>
+							</div> -->
+						<!-- End No Alerts -->
+
+						<!-- If Alerts -->
+
+			<!-- 			<h2 class="page-title"></h2>
+			 -->
+			 <!-- Spinner for waiting for the data to load. Nice UX touch! -->
+
+		<div>
+			 <div ng-repeat="alert in alerts">
+			 	
+<!-- 			 	{{((alert.url).split("").reverse().join("")).substring(0,9)}} -->
+ 				<a href="
+ 				#/single-alert/{{(alert.url).slice(-9)}}
+ 				">
+ 					<!--link to page for associated server -->
+
+				<div class="alert-box outage">
+					<div class="swipeTab"><div class="arrow"></div></div>
+					<h3 class="nickName">{{alert.server_name}}<span class="ipAddress">&nbsp;{{alert.server_fqdn}}</span></h3>
+					
+						<div class="alert-meta">
+						
+								<span class="alertType icon icon-warning">Outage</span>
+								<span class="sep"> - </span>
+								<span class="duration">{{(alert.start_time).substring(0, (alert.start_time).length-5)}}</span>
+								<span class="sep"> - </span>
+								<br>
+								<span class="duration">{{getDuration(alert.start_time, alert.end_time)}}</span>
+								<br>
+								<span class="alert-meta">Type: {{alert.type | lowercase }}</span>
+
+						</div>
+					
+
+				</div>
+				</a>
+			  </div>
+		</div>
+<!--  -->
+	</main>
+	<main class="no-alerts" ng-show="none">
+		<div class="no-alerts">
+		<h2>A-Okay</h2>
+		<p>You have no active alerts!</p>
+		</div>
+	</main>

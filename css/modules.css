@@ -1,0 +1,340 @@
+* {
+	box-sizing:border-box;
+}
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+p, span, h1,h2,h3,h4,h5,h6 {
+	-webkit-font-smoothing: antialiased;
+}
+
+.cf:after {
+    clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+    *zoom: 1;
+}
+
+.float-l {
+	float:left;
+}
+.float-r {
+	float:right;
+}
+
+.align-c {
+	text-align: center;
+}
+.no-padding {padding:0!important;}
+.no-margin: {margin:0!important;}
+
+/*********************
+Alert Box
+*********************/
+.alert-box {
+	padding:.5em .5em .5em 1em;
+	margin-bottom:1em;
+	background:#fff;
+	position: relative;
+}
+
+.alert-box {
+	border:1px solid #ddd;
+	box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.05);
+}
+.alert-box > * {
+	margin:0;
+}
+
+.alert-box h3 {
+	width: 265px;
+	padding-bottom:.15em;
+	font-size:1em;
+	font-weight:400;
+	overflow: hidden;
+}
+
+.ipAddress {
+	padding-left:.25em;
+	font-size:12px;
+	color:#a9aaaa;
+
+}
+
+.alert-box .alert-meta span {
+	line-height:1.2;
+	font-size:12px;
+}
+
+.alert-box.outage .alert-meta span, .alert-box.critical .alert-meta span {
+	color:#b94a48;
+}
+
+.alert-box.warning .alert-meta span {
+	color:#76A6A6;
+}
+
+.alertType:before {
+	margin-right:5px;
+}
+
+
+.warning .alertType:before, .warning strong {
+	color:#76A6A6;
+}
+
+.swipeTab, .swipeTab .arrow {
+	position:absolute;
+	z-index:3; /*in front of alert box*/
+
+}
+.swipeTab {
+	height: calc(100% + 2px);
+	width:3px;
+	background:#fba32f;
+	left:-1px;
+	top:-1px;
+}
+
+.swipeTab .arrow {
+	width:0;
+	height:0;
+	margin: auto 0;
+	border-left:3px solid #fba32f;
+	border-bottom:6px solid transparent;
+	border-top:6px solid transparent;
+	left:3px;
+	bottom:0;
+	top:0;
+}
+
+
+/***********************
+Servers
+************************/
+
+.serverList {
+	background:#fff;
+}
+
+.serverGroup .groupStatus:before {
+	content:attr(data-groupStatus);
+
+}
+.serverGroup .groupStatus {
+	position: absolute;
+	bottom:0;
+	top:0;
+	right:4%;
+	width:1.5em;
+	height:1.5em;
+	border-radius: 3px;
+	margin:auto 0;
+	text-align: center;
+	background: #b94a48;
+	color: white;
+}
+
+.serverGroup .title {
+	padding: 1em 0;
+	background:#fff;
+	border-bottom:1px solid #ddd;
+	position: relative;
+}
+
+.serverGroup .title h3 {
+	padding-left:4%;
+	margin:0;
+	font-size:1.5em;
+	font-weight:300;
+}
+
+.serverGroup .title h3:before {
+	margin-right:8px;
+	color:#fba32f;
+	font-size:85%;
+}
+
+.subGroup{
+	margin:0 -4%;
+}
+
+.subGroup .title {
+	padding-left:4%;
+}
+
+.subGroup .server {
+	margin-left:4%;
+}
+
+.serverGroup .server:first-child {
+	margin-top:.5em;
+}
+.serverGroup .server:last-child {
+	margin-bottom:.5em;
+}
+
+.server {
+	padding:.5em 0;
+}
+
+.serverID:before {
+	content:attr(data-status);
+	display:inline-block;
+	width: 1.25em;
+	margin: 0 4px 0 0;
+	background: #7CC27E;
+	border-radius: 3px;
+	vertical-align: middle;
+	font-size: .8em;
+	color: white;
+	text-align: center;
+	position: relative;
+	top:.5em;
+}
+
+.alerts.serverID:before {
+	background:#b94a48;
+}
+.serverID {
+	max-width:90%;
+}
+.serverID .ipAddress {
+	display:block;
+	margin-left:1.5em;
+}
+/**************************
+Folder States
+**************************/
+
+.serverGroup.active .title {
+	background:#eef5f5
+}
+
+.serverGroup.active .title h3 {
+	font-weight:600;
+}
+
+.serverGroup.active {
+	border-bottom:1px solid #ddd;
+}
+.serverGroup.subgroup.active .title {
+	background:#eef5f5;
+}
+.server, .subgroup, .subgroup.subgroup {
+	display:none;
+}
+
+.serverGroup.active:hover .subgroup, .serverGroup.active:hover .server {
+	display:block;
+}
+
+.schedule .title {
+font-weight:600;
+text-align:center;
+}
+
+/*********************
+Content Box
+*********************/
+.content-box {
+border:1px solid #ddd;
+margin-top:.5em;
+padding:0 4%;
+background:#fff;
+}
+.content-box:first-child {
+margin-top:1em;
+}
+
+/**************************
+Notifications
+**************************/
+.notificationOptions {
+text-align:center;
+margin-top:1em;
+}
+
+.notificationTitle {
+margin:0;
+padding-top:.5em;
+}
+
+.timeline {
+margin:1.5em 0 2em 0;
+}
+
+.event-separator {
+height:40px;
+margin:.5em 0;
+border-left:1px dotted #ddd;
+position:relative;
+left:6px;
+}
+
+.resolved-separator {
+height:15px;
+margin:.5em 0;
+border-left:1px dotted #ddd;
+position:relative;
+left:6px;
+}
+
+.event-separator span {
+font-size:12px;
+color:#a9aaaa;
+position:relative;
+top:10px;
+left:5px;
+}
+
+.notificationEvent {
+color:#fba32f;
+font-weight:600;
+}
+.notificationEvent span {
+font-size:12px;
+color:#a9aaaa;
+}
+
+.outageConfirmed:before {
+color:#b94a48;
+}
+
+.OutageResolved:before {
+color:#7CC27E;
+}
+
+.button {
+padding:.8em 1.2em;
+border-radius:3px;
+text-transform: uppercase;
+font-size:.9em;
+font-weight:bold;
+color:white;
+}
+.button:hover {
+color:white;
+}
+
+.button-orange {
+background:#fba32f;
+}
+
+.button-grey {
+background:#666;
+}
+
+.half-width {
+display:inline-block;
+width:49%;
+}
+

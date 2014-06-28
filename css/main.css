@@ -1,0 +1,243 @@
+@import 'modules.css';
+/*Steve's CSS +++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++++++++++++++e*/
+.note-des{
+	padding:2px 1px 1px 1px;
+	font-size: 0.85em;
+}
+
+.target-url{
+	font-size: 0.78em;
+	font-style: italic;
+}
+.bottom-space {
+	padding: 0px 0px 10px 0px;
+	margin-bottom: 15px;
+}
+.outage-on {
+	color: #fff;
+	background: red;
+	padding: 1px 1px 1px 3px;
+	border-radius: 5px;
+}
+.notify-count {
+	margin-top:0px;
+	margin-bottom:1px;
+	text-align: center;
+	font-size: 1.1em;
+	font-weight: bold;
+}
+.outage-title {
+	font-size: 1.1em;
+	font-weight: bold;
+	text-align: center;
+	padding:0;
+	margin:0;
+}
+
+.outage-over {
+	color: green;
+	text-transform: capitalize;
+}
+
+#outage-on-font {
+	font-weight: bold;
+	color: #fff;
+	text-transform: capitalize;
+}
+.total-outages {
+	font-size: .9em;
+	text-align: center;
+	padding:0;
+	margin-top: 2px;
+	font-weight: bold;
+	color: red;
+}
+.webaddress {
+	padding-left: 0px;
+	font-size:11px;
+	color:#a9aaaa;
+}
+#sminfo {
+	font-size: .8em;
+	color: black;
+}
+
+.outage-info {
+	font-size: .85em;
+	padding: 0px 1px 0px 1px;
+}
+/*mine is above++++++++++++++++++++
++++++++++++++++++++++++++++++++++*/
+.proto-wrap {
+	width:320px;
+	height:568px;
+	position:absolute;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	margin:auto;
+	border:1px solid black;
+}
+
+.end-menu {
+	text-align: center;
+	font-size: .9em;
+	font-weight: bold;
+	color: orange;
+}
+
+
+
+.app-wrapper {
+	position:relative;
+}
+
+.no-alerts {
+position: absolute;
+top: 0;
+bottom: 0;
+left: 0;
+right: 0;
+margin: auto;
+width: 100%;
+height: 28%;
+text-align: center;
+}
+/********************
+Typography
+********************/
+
+body {
+	font-family:Open Sans, sans-serif;
+	color:#333;
+	font-size:14px;
+}
+
+h1 { font-size:28px; font-weight:800;}
+h2 { font-size:24px; font-weight:800;}
+h3 { font-size:22px;}
+h4 { font-size:20px;}
+h5 { font-size:18px;}
+
+a { color:inherit; text-decoration: none;}
+a:hover {color:inherit; text-decoration:none;}
+
+.page-title {
+	margin-top:0;
+	margin-bottom:.5em;
+	text-align: center;
+}
+
+.icon:before {
+	font-family:icomoon;
+}
+i.icon {font-family:icomoon;}
+.icon {
+	font-family:open sans, sans-serif;
+}
+/********************
+Header Styles
+********************/
+
+header {
+	height: 44px;
+	width: 318px;
+	border-bottom: 1px solid #dddddd;
+	z-index: 2;/* In front of Main */
+	background: #fff;
+}
+
+.header-nav {
+	max-width:92%;
+	margin: 0 auto;
+	position: relative;
+	top:8px;
+}
+
+.header-nav .backArrow {
+	position: relative;
+	left:-5px;
+}
+
+.header-nav i {
+	font-size:28px;
+	color:#fba32f;
+}
+
+
+.header-nav .logo img{
+	max-width:40px;
+	width:auto;
+}
+
+.header-nav .logo {
+	position:absolute;
+	left: 50%;
+	margin-top:2px;
+	margin-left: -23px;
+}
+
+/********************
+Main Styles
+********************/
+
+main {
+	margin: 0 auto;
+	padding-bottom:4em;
+	height: 522px;
+	z-index: 1;
+	overflow: auto;
+	background: #fbfbfb;
+}
+
+.container {
+	max-width:92%;
+	margin:0 auto;
+	padding-top:1em;
+}
+/********************
+Footer Styles
+********************/
+
+footer {
+	height:44px;
+	position: absolute;
+	width: 100%;
+	bottom: 0;
+	background:#fba32f;
+	box-shadow: 0px -1px 1px #ddd;
+	z-index:2; /* In Front of Main */
+}
+
+footer i {
+	color:#fff;
+	font-size:26px;
+}
+
+.footer-wrap {
+	width:75%;
+}
+
+.footer-wrap, .footer-nav {
+	margin:0 auto;
+	text-align:center;
+}
+
+.footer-nav > * {
+	display:inline-block;
+}
+
+.footer-nav {
+	position:relative;
+	top:10px;
+}
+.footer-nav img {
+	width:55%;
+}
+
+.servers {
+	padding: 0 24%;
+}
+

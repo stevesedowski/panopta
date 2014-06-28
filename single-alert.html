@@ -1,0 +1,41 @@
+
+		<div ng-hide="val" id="spacer">
+			<div class="loading bar">
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+		</div>
+
+	<main id="alerts" ng-show="active">
+		<div class="container">
+				<div class="alert-box outage">
+					<div class="swipeTab">
+						<div class="arrow"></div>
+					</div>
+						<h3 class="nickName">{{sname}}
+							<br/>
+							<span class="webaddress">{{server}}</span></h3>
+						<div class="alert-meta">
+							<span class="alertType icon icon-warning">Outage</span>
+							<span class="sep"> - </span>
+							<span class="duration">{{start_time.substring(0, (start_time).length-5)}}</span>
+							<br/>
+							<span class="duration">{{getDuration(start_time, end_time)}}</span>
+							<br>
+							<span class="alert-meta">Type: {{type}}</span>
+							<div class="outage-info">FQDN: {{fqdn}}</div>
+							<div class="outage-info">Hash: {{hash}}</div>
+						</div>
+				</div>
+		</div>
+		<div class="end-menu">
+			<span><a href="#">back</a></span> | <a href="#/idhistory/{{server.slice(-6)}}">outage history</a>| <span>groups</span> | <a href="#outage">all outages</a>
+		</div>
+	</main>
+

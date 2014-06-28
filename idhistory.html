@@ -1,0 +1,51 @@
+<div ng-hide="val" id="spacer">
+	<div class="loading bar">
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+	</div>
+</div>
+
+</div>
+	<main id="alerts" ng-show="val">
+		<div class="container">
+				<h3 class="outage-title">Outage History</h3>
+				<h3 class="total-outages">Total Outages: {{total_outs}}</h3>
+			<div ng-repeat="info in outageHistory">
+				<div class="alert-box outage">
+					<div class="swipeTab">
+						<div class="arrow"></div>
+					</div>
+						<h3 class="nickName">{{info.server_name}}<br><span class="webaddress">{{info.server}}</span></h3>
+						<div class="alert-meta">
+							<span class="alertType icon icon-warning">Outage</span>
+							<span class="sep"> - </span>
+							<span class="duration">{{}}</span>
+							<span class="sep"> - </span>
+	
+							<div class="outage-info">Started At: {{(info.start_time).substring(0, (info.start_time).length-5)}}</div>
+							<div class="outage-info">Ended At: {{(info.end_time).substring(0, (info.end_time).length-5)}}</div>
+<div ng-class="{'outage-over' : info.status, 'outage-on' : !info.status}">Status: {{info.status}} <span id="outage-on-font" ng-show="!info.status">Still Ongoing</span></div>
+						</div>
+				</div>
+			</div>
+		</div>
+	</main>
+	<main class="no-alerts" ng-show="none">
+		<div class="no-alerts">
+		<h2>A-Okay</h2>
+		<p>There's no outage history!</p>
+		</div>
+	</main>
+	<main class="no-alerts" ng-show="errorTrue">
+		<div class="no-alerts">
+		<h2>Error</h2>
+		<p>There's a problem with loading data.</p>
+		</div>
+	</main>
+ 

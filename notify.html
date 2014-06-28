@@ -1,0 +1,62 @@
+		<div ng-hide="val" id="spacer">
+			<div class="loading bar">
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+		</div>
+
+<div>
+<!-- 	<div ng-repeat="notice in list">
+		
+		<div>Description: {{notice.description}}</div>
+		<div>Name: {{notice.name}}</div>
+		<div>Targets: {{notice.targets}}</div>
+	</div>
+</div> -->
+
+	<main class="no-alerts" ng-show="none">
+		<div class="no-alerts">
+			<p>There are no scheduled notificaitons.</p>
+		</div>
+	</main>
+
+		<main ng-show="val">
+			<div class="container">
+
+			<h3 class="page-title" >Notification Schedules</h3>
+			<h3 class="notify-count">{{total}} are scheduled.</h3>
+
+			<section class="schedule-list" ng-repeat="notice in list">
+
+				<div class="schedule content-box">
+					<div class="title">{{$index+1}}. {{notice.name}}</div>
+					<div class="note-des">{{notice.description}}</div>
+
+					<div ng-repeat="target in notice.targets">
+						<div class="target-url">{{target}}</div>
+					</div>
+
+				</div>
+
+			</section>
+
+			<section class="notificationOptions">
+				<a href="#" class="button button-orange half-width">Add Schedule</a>
+				<a href="#" class="button button-grey half-width">Add User</a>
+				<!--Button to Add User -->
+				<!--Button to Create Schedule -->
+				<!--Note: These will not be functional in v1.0 -->
+			</section>
+			</div>
+		<div class="bottom-space">&nbsp;</div>
+</main>
+
+<!-- 	<div ng-repeat="target in list.targets">
+		<div>{{target}}</div>
+	</div> -->

@@ -1,0 +1,105 @@
+<html ng-app="notifyApp">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no">
+
+	<title>Monitoring Dashboard | Panopta </title>
+<link rel="stylesheet" href="http://i.icomoon.io/public/temp/bc5cbeea1c/Panopta/style.css">
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,700,800' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="/css/spin.css">
+	<link rel="stylesheet" href="/css/normalize.css">
+<!-- 	<link rel="stylesheet" href="http://i.icomoon.io/public/temp/d776565eb2/Panopta/style.css"> -->
+	<link rel="stylesheet" href="/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/css/main.css">
+<script type="text/javascript" src="/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="proto-wrap">
+		<header>
+			<nav>
+				<div class="header-nav">
+
+				<!-- Page Specific back arrow on internal, blank on home -->
+					<div class="backArrow float-l">
+						<a href="#" rel="prev"><i class="icon icon-arrow-left"> </i></a>
+					</div>
+				<!-- End Back Arrow -->
+
+					<div class="logo">
+						<a href="#"><img src="/img/logo.svg" alt="Panopta Logo"></a>
+
+					</div>
+
+					<div class="settings float-r">
+						<a href="#"><i class="icon icon-cog"></i></a>
+
+					</div>
+
+			</div>
+			</nav>
+
+		</header>
+	<ng-view></ng-view>
+<!-- 	<footer>
+
+		<nav class="row footer-wrap">
+			<div class="footer-nav">
+				<div class="alerts">
+					<a href="#"><i class="icon icon-warning"></i></a>
+				</div>
+
+				<div class="servers">
+					<a href="#"><i class="icon icon-folder"></i></a>
+				</div>
+
+				<div class="notifications">
+					<a href="#"><i class="icon icon-clock"></i></a>
+				</div>
+			</div>
+
+		</nav>
+
+	</footer> -->
+<footer>
+
+	<nav class="row footer-wrap">
+	<div class="footer-nav">
+	<div class="alerts">
+	<a href="#/"><i class="icon icon-warning"></i></a>
+	</div>
+
+	<div class="servers">
+	<a href="#/groups"><i class="icon icon-folder"></i></a>
+	</div>
+
+	<div class="notifications">
+	<a href="#/notify"><i class="icon icon-clock"></i></a>
+	</div>
+	</div>
+
+	</nav>
+
+</footer>
+</div>
+	</body>
+	<script type="text/javascript" src="/js/angular.min.js"></script>
+	<script type="text/javascript" src="/js/angular-resource.js"></script>
+	<script type="text/javascript" src="/js/angular-route.min.js"></script>
+
+	<script type="text/javascript" src="/js/app.js"></script>
+	<script type="text/javascript" src="/js/outage.js"></script>
+	<script type="text/javascript" src="/js/outageCtrl.js"></script>
+	<script type="text/javascript" src="/js/homeCtrl.js"></script>
+	<script type="text/javascript" src="/js/alerts.js"></script>
+	<script type="text/javascript" src="/js/alert-directive.js"></script>
+	<script type="text/javascript" src="/js/alertInfoCtrl.js"></script>
+	<script type="text/javascript" src="/js/groupsCtrl.js"></script>
+	<script type="text/javascript" src="/js/groups.js"></script>
+	<script type="text/javascript" src="/js/notices.js"></script>
+	<script type="text/javascript" src="/js/notifyCtrl.js"></script>
+	<script type="text/javascript" src="/js/singCtrl.js"></script>
+	<script type="text/javascript" src="/js/single.js"></script>
+	<script type="text/javascript" src="/js/idCtrl.js"></script>
+	<script type="text/javascript" src="/js/singlehistory.js"></script>
+	<script type="text/javascript" src="/js/timediff.js"></script>
+</html>
